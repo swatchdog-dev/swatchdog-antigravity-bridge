@@ -129,7 +129,7 @@ support: hey@swatchdog.dev
 }
 ```
 
-**Connector endpoint** (BYO-only, no key needed — add a key to remove the rate cap):
+**Connector endpoint** (*In process: Pending Connector Submission Approval* BYO-only, no key needed — add a key to remove the rate cap):
 
 ```json
 {
@@ -142,5 +142,5 @@ support: hey@swatchdog.dev
 }
 ```
 
-[Pending submission approval] In **claude.ai**: Settings → Connectors → Add custom connector → paste the connector
+[In process: Pending connector submission approval] In **claude.ai**: Settings → Connectors → Add custom connector → paste the connector
 URL above — no credentials needed.
