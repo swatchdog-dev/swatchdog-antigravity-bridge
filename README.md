@@ -58,8 +58,8 @@ Supported tools
 `code` (string, required) — the CSS/markup to check.
 Returns per-violation: axis · found value · expected token + value · location.
 
-Access & pricing (one-time, no subscriptions)
-Lane	What you get	Where
+# Access & pricing (one-time, no subscriptions)
+> Lane	What you get	Where
 Free — sandbox key `swt_sandbox_studio`	pack checks vs the Studio family	main endpoint
 Free — keyless	BYO checks, shared rate-capped lane	connector endpoint
 $12 — drift-check license	BYO checks, your own uncapped key	both endpoints (key sent as a bearer header)
@@ -67,15 +67,18 @@ $19 / $49 — pack or bundle	premium families (Workbench, Showcase, Terminal) + 
 If a free caller attempts a premium or BYO check on the main endpoint, the tool returns
 a structured JSON upgrade payload with where to get a key — at
 swatchdog.dev.
-Privacy & telemetry
+> 
+# Privacy & telemetry
 All checks are on-demand and transient.
 No source code, files, or custom tokens are ever stored on our servers.
 We log minimal usage metadata — the source tag, which pack, and the finding
 outcome, tied to the account the key belongs to — never your license key, your
 source code, or your tokens.
+
 Created and maintained by swatchdog.dev ·
 privacy policy: swatchdog.dev/privacy.html ·
 support: hey@swatchdog.dev
+>
 ---
 Client Integration
 Main endpoint (packs + BYO, bearer key — the free sandbox key shown):
