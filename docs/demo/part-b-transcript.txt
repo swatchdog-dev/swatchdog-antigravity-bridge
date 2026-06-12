@@ -1,0 +1,28 @@
+target: https://swatchdog-connector-970396648818.us-central1.run.app/mcp
+
+== keyless — the free shared lane ==
+  connected (keyless — the free shared lane)
+  ✅ PASS  exactly one tool — check_design_drift
+  ✅ PASS  tool is check_design_drift
+  ✅ PASS  readOnlyHint: true
+  ✅ PASS  no pack resources (trimmed profile)
+  ✅ PASS  case 1 clean pass: ok=true, count=0 — {"ok": true, "count": 0, "violations": [], "skipped": ["spacing_tokens", "font_family", "font_size", "semantic_color"]}
+  ✅ PASS  case 2 drift caught: count=2 (color+radius), expected token+value present — {"ok": false, "count": 2, "violations": [{"axis": "color", "found": "#ff00ff", "at": "content:1", "expected": "color.primary", "expectedValue": "#b06ed0"}, {"axis": "radius", "found": "9px", "at": "content:1", "expected": "radius.md", "expectedValue": "6px"}], "skipped": ["spacing_tokens", "font_family", "font_size", "semantic_color"]}
+  ✅ PASS  case 3 empty tokens: actionable error, not a 500 — {"error": "no usable tokens found \u2014 expected at least one of color/radius/space/font/type. Re-extract the user's design tokens and confirm before checking."}
+
+== bad key (expect a clean 401) ==
+  ✅ PASS  case 4 bad key -> 401 — HTTPStatusError: Client error '401 Unauthorized' for url 'https://swatchdog-connector-970396648818.us-central1.run.app/mcp'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTT
+
+== case 5 paid lane (your key) ==
+  connected (case 5 paid lane (your key))
+  ✅ PASS  exactly one tool — check_design_drift
+  ✅ PASS  tool is check_design_drift
+  ✅ PASS  readOnlyHint: true
+  ✅ PASS  no pack resources (trimmed profile)
+  ✅ PASS  case 1 clean pass: ok=true, count=0 — {"ok": true, "count": 0, "violations": [], "skipped": ["spacing_tokens", "font_family", "font_size", "semantic_color"]}
+  ✅ PASS  case 2 drift caught: count=2 (color+radius), expected token+value present — {"ok": false, "count": 2, "violations": [{"axis": "color", "found": "#ff00ff", "at": "content:1", "expected": "color.primary", "expectedValue": "#b06ed0"}, {"axis": "radius", "found": "9px", "at": "content:1", "expected": "radius.md", "expectedValue": "6px"}], "skipped": ["spacing_tokens", "font_family", "font_size", "semantic_color"]}
+  ✅ PASS  case 3 empty tokens: actionable error, not a 500 — {"error": "no usable tokens found \u2014 expected at least one of color/radius/space/font/type. Re-extract the user's design tokens and confirm before checking."}
+  (paid lane — same contract, never rate-capped)
+
+ALL GREEN — Part B cleared
